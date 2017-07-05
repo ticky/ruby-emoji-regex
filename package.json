@@ -1,0 +1,11 @@
+{
+  "name": "ruby-emoji-regex",
+  "author": "Jessica Stokes <hello@jessicastokes.net>",
+  "license": "MIT",
+  "scripts": {
+    "build": "node script/import.js"
+  },
+  "devDependencies": {
+    "emoji-regex": "https://github.com/ticky/emoji-regex.git#es6-unicode-hax"
+  }
+}
