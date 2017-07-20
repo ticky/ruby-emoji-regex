@@ -51,3 +51,19 @@ Emoji symbols which aren't emoji by default can also be matched by the other reg
 ```ruby
 EmojiRegex::Text
 ```
+
+## Development
+
+### Where's all the `lib`?
+
+The source files distributed as part of the gem are not included in this repository. They are generated (from the templates in `src`) when the gem is published.
+
+### Building
+
+Building requires Node.js (version 6 or newer) and the [`yarn`](https://yarnpkg.com) Javascript package manager.
+
+```shell
+yarn && yarn build
+```
+
+After running the above commands, the `lib` directory is populated, and a gem package can be produced using `gem build emoji_regex.gemspec`!
