@@ -2,6 +2,6 @@
 # yarn lockfile v1
 
 
-"emoji-regex@https://github.com/ticky/emoji-regex.git#es6-unicode-hax":
-  version "6.4.3"
-  resolved "https://github.com/ticky/emoji-regex.git#1992d4ebf99fd7862cd46eba4891e2156e636f82"
+emoji-regex@^6.5.0:
+  version "6.5.0"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-6.5.0.tgz#c1699e17f34154f7922219ea712ea76a2619c77b"

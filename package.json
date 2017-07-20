@@ -6,6 +6,6 @@
     "build": "node script/import.js"
   },
   "devDependencies": {
-    "emoji-regex": "https://github.com/ticky/emoji-regex.git#es6-unicode-hax"
+    "emoji-regex": "^6.5.0"
   }
 }

@@ -12,8 +12,8 @@ const replaceEscapes = (regexFactory) => (
     .slice(0, -2)
 );
 
-const emojiRegex = replaceEscapes(require('emoji-regex/unicode'));
-const emojiRegexText = replaceEscapes(require('emoji-regex/unicode/text'));
+const emojiRegex = replaceEscapes(require('emoji-regex/es2015'));
+const emojiRegexText = replaceEscapes(require('emoji-regex/es2015/text'));
 
 const input = fs.readFileSync(path.join(__dirname, '../src/emoji-regex.rb'), 'utf8');
 
