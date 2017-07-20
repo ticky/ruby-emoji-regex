@@ -15,10 +15,10 @@ const replaceEscapes = (regexFactory) => (
 const emojiRegex = replaceEscapes(require('emoji-regex/es2015'));
 const emojiRegexText = replaceEscapes(require('emoji-regex/es2015/text'));
 
-const input = fs.readFileSync(path.join(__dirname, '../src/emoji-regex.rb'), 'utf8');
+const input = fs.readFileSync(path.join(__dirname, '../src/emoji_regex.rb'), 'utf8');
 
 const output = input
   .replace('/% emojiRegex %/', emojiRegex)
   .replace('/% emojiRegexText %/', emojiRegexText);
 
-fs.writeFileSync(path.join(__dirname, '../lib/emoji-regex.rb'), output);
+fs.writeFileSync(path.join(__dirname, '../lib/emoji_regex.rb'), output);
