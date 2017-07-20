@@ -19,7 +19,7 @@ gem install emoji_regex
 ## Usage
 
 ```ruby
-require 'emoji-regex'
+require 'emoji_regex'
 
 text = <<TEXT
 \u{231A}: ⌚️ default emoji presentation character (Emoji_Presentation)
