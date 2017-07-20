@@ -1,5 +1,7 @@
 # Ruby Emoji Regex 💎
 
+[![Gem Version](https://badge.fury.io/rb/emoji_regex.svg)](https://badge.fury.io/rb/emoji_regex)
+
 A pair of Ruby regular expressions for matching Unicode Emoji symbols.
 
 ## Background
@@ -11,7 +13,7 @@ The regular expression provided herein is converted from that pacakge.
 ## Installation
 
 ```shell
-# TODO
+gem install emoji_regex
 ```
 
 ## Usage
