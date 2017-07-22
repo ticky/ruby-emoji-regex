@@ -1,4 +1,4 @@
-node_modules
-lib
-
-*.gem
+/node_modules/
+/Gemfile.lock
+/pkg/
+/lib/

@@ -9,4 +9,7 @@ Gem::Specification.new do |s|
   s.email       = 'hello@jessicastokes.net'
   s.license     = 'MIT'
   s.files       = ['lib/emoji_regex.rb']
+
+  s.add_development_dependency "bundler", "~> 1.15"
+  s.add_development_dependency "rake", "~> 10.0"
 end
