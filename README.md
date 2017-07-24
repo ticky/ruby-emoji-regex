@@ -54,31 +54,35 @@ EmojiRegex::Text
 
 ## Development
 
-Requirements:
+### Requirements
 
 * Ruby
 * [Node](https://nodejs.org) (v6 or newer)
 * [Yarn](https://yarnpkg.com)
 
-Initial setup:
+### Initial setup
+
+To install all the Ruby and Javascript dependencies, you can run:
 
 ```bash
 bin/setup
 ```
 
-Updating the Ruby source files with the latest `emoji-regex` Node library regexp patterns:
+To update the Ruby source files based on the `emoji-regex` library:
 
 ```bash
 rake regenerate
 ```
 
-Running the specs:
+### Specs
+
+A spec suite is provided, which can be run as:
 
 ```bash
 rake spec
 ```
 
-## Creating a release
+### Creating a release
 
 1. Update the version in [emoji_regex.gemspec](emoji_regex.gemspec)
 1. `rake release`
