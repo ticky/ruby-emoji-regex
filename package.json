@@ -6,6 +6,6 @@
     "build": "node script/import.js"
   },
   "devDependencies": {
-    "emoji-regex": "^6.5.0"
+    "emoji-regex": "https://github.com/toolmantim/emoji-regex.git#add-es2015-patterns"
   }
 }
