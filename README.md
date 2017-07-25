@@ -28,7 +28,7 @@ gem install emoji_regex
 
 `Emoji_Presentation` is a property of emoji symbols, defined in [Unicode Technical Report #51](http://unicode.org/reports/tr51/#Emoji_Properties_and_Data_Files) which controls whether symbols are intended to be rendered as emoji by default.
 
-Generally, for emoji which re-use Unicode code points which existed before Emoji itself was introduced to Unicode generally, `Emoji_Presentation` is `false`.
+Generally, for emoji which re-use Unicode code points which existed before Emoji itself was introduced to Unicode, `Emoji_Presentation` is `false`.
 
 This means they should be displayed as monochrome text characters by default, and should be combined with `U+FE0F VARIATION SELECTOR-16` to indicate emoji presentation is desired.
 
