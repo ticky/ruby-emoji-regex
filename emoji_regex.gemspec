@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.authors     = ['Jessica Stokes']
   s.email       = 'hello@jessicastokes.net'
   s.license     = 'MIT'
-  s.files       = ['lib/emoji_regex.rb']
+  s.files       = ['lib/emoji_regex.rb', 'LICENSE.md', 'README.md']
 
   s.add_development_dependency "bundler", "~> 1.15"
   s.add_development_dependency "rake", "~> 10.0"
