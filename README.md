@@ -1,6 +1,6 @@
 # Ruby Emoji Regex 💎
 
-[![Gem Version](https://badge.fury.io/rb/emoji_regex.svg)](https://rubygems.org/gems/emoji_regex) [![Build Status](https://travis-ci.org/ticky/ruby-emoji-regex.svg?branch=master)](https://travis-ci.org/ticky/ruby-emoji-regex)
+[![Gem Version](https://badge.fury.io/rb/emoji_regex.svg)](https://rubygems.org/gems/emoji_regex) [![Build Status](https://travis-ci.org/ticky/ruby-emoji-regex.svg?branch=develop)](https://travis-ci.org/ticky/ruby-emoji-regex)
 
 A pair of Ruby regular expressions for matching Unicode Emoji symbols.
 
