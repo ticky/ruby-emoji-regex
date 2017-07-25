@@ -3,6 +3,9 @@ before_install:
   - curl -o- -L https://yarnpkg.com/install.sh | bash -s
   - export PATH="$HOME/.yarn/bin:$PATH"
 install: bin/setup
+script:
+  - rake regenerate
+  - rake
 cache:
   bundler: true
   directories:
