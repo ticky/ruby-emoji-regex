@@ -1,0 +1,7 @@
+change-template: |
+  * $NUMBER: $TITLE by @$AUTHOR
+
+template: |
+  $CHANGES
+
+  Thanks to $CONTRIBUTORS!
