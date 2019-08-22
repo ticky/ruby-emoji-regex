@@ -27,7 +27,7 @@ RSpec.describe EmojiRegex do
     end
 
     it "doesn't match non-emojis" do
-      expect("abc".scan(EmojiRegex::Regex)).to eql([])
+      expect("abc123#*".scan(EmojiRegex::Regex)).to eql([])
     end
   end
 
@@ -61,7 +61,7 @@ RSpec.describe EmojiRegex do
     end
 
     it "doesn't match non-emojis" do
-      expect("abc".scan(EmojiRegex::Text)).to eql([])
+      expect("abc123#*".scan(EmojiRegex::Text)).to eql([])
     end
   end
 end
