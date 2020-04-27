@@ -2,5 +2,6 @@
 
 set -euo pipefail
 
+gem install bundler
 bundle install
 yarn install
