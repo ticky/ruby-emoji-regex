@@ -26,6 +26,14 @@ RSpec.describe EmojiRegex do
       expect("\u{1F9CF}\u{1F3FB}\u{200D}\u{2640}\u{FE0F}".scan(EmojiRegex::Regex)).to eql(["\u{1F9CF}\u{1F3FB}\u{200D}\u{2640}\u{FE0F}"])
     end
 
+    it "matches 🪴 potted plant" do
+      expect("\u{1FAB4}".scan(EmojiRegex::Regex)).to eql(["\u{1FAB4}"])
+    end
+
+    it "matches 🤌🏼 pinched fingers: medium-light skin tone (emoji modifier base followed by a modifier)" do
+      expect("\u{1F90C}\u{1F3FC}".scan(EmojiRegex::Text)).to eql(["\u{1F90C}\u{1F3FC}"])
+    end
+
     it "doesn't match non-emojis" do
       expect("abc".scan(EmojiRegex::Regex)).to eql([])
     end
@@ -58,6 +66,14 @@ RSpec.describe EmojiRegex do
 
     it "matches 🧏🏻‍♀️ deaf woman: light skin tone (emoji modifier bae followed by a modifier and gender ZWJ sequence)" do
       expect("\u{1F9CF}\u{1F3FB}\u{200D}\u{2640}\u{FE0F}".scan(EmojiRegex::Text)).to eql(["\u{1F9CF}\u{1F3FB}\u{200D}\u{2640}\u{FE0F}"])
+    end
+
+    it "matches 🪴 potted plant" do
+      expect("\u{1FAB4}".scan(EmojiRegex::Text)).to eql(["\u{1FAB4}"])
+    end
+
+    it "matches 🤌🏼 pinched fingers: medium-light skin tone (emoji modifier base followed by a modifier)" do
+      expect("\u{1F90C}\u{1F3FC}".scan(EmojiRegex::Text)).to eql(["\u{1F90C}\u{1F3FC}"])
     end
 
     it "doesn't match non-emojis" do
