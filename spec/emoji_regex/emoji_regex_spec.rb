@@ -34,6 +34,10 @@ RSpec.describe EmojiRegex do
       expect("\u{1F90C}\u{1F3FC}".scan(EmojiRegex::Text)).to eql(["\u{1F90C}\u{1F3FC}"])
     end
 
+    it "matches 👁 correctly" do
+      expect("👁".scan(EmojiRegex::Regex)).to eql(["\u{1F441}"])
+    end
+
     it "doesn't match non-emojis" do
       expect("abc".scan(EmojiRegex::Regex)).to eql([])
     end
