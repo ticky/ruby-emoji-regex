@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'emoji_regex'
   s.summary     = 'Emoji Regex'
-  s.description = 'A pair of Ruby regular expressions for matching Unicode Emoji symbols.'
+  s.description = 'A set of Ruby regular expressions for matching Unicode Emoji symbols.'
   s.homepage    = 'https://github.com/ticky/ruby-emoji-regex'
   s.version     = '3.0.0'
   s.date        = '2020-04-27'
