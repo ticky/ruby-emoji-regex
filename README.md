@@ -159,6 +159,17 @@ A spec suite is provided, which can be run as:
 rake spec
 ```
 
+### Versioning Policy
+
+Since [Version 1.0.0](https://github.com/ticky/ruby-emoji-regex/releases/tag/v1.0.0), Ruby Emoji Regex's versions have followed that of the `emoji-regex` package, minus 6 major versions.
+
+Each published version of Ruby Emoji Regex will aim to:
+- Include any changes in the provided regex in a version matching that of the `emoji-regex` package, keeping the major and minor versions in step.
+- When a patch revision of `emoji-regex` is released, if its changes affect the Ruby port meaningfully, a version will be released with the same or greater patch version.
+- If a change is required to correct a bug specific to the Ruby port, the patch number will be incremented.
+
+Likewise, and so far coincidentally, versions of Ruby Emoji Regex follow the Unicode Standard's version, minus 10 major versions. Therefore, version 1 included Unicode 11, version 2 Unicode 12, and 3 Unicode 13.
+
 ### Creating a release
 
 1. Update the version in [emoji_regex.gemspec](emoji_regex.gemspec)
