@@ -1,0 +1,31 @@
+name: Node & Ruby CI
+
+on:
+  push:
+    branches: [ develop ]
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  test:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v1
+
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+
+    - name: Run Setup Script
+      run: bin/setup
+
+    - name: Regenerate code
+      run: bundle exec rake regenerate
+
+    - name: Run specs
+      run: bundle exec rake
