@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 const fs = require('fs');
+const glob = require('glob');
 const path = require('path');
 
 const replaceEscapes = (regexFactory) => (
@@ -18,11 +19,48 @@ const emojiRegexRGI = replaceEscapes(require('emoji-regex/es2015/RGI_Emoji'));
 const emojiRegex = replaceEscapes(require('emoji-regex/es2015'));
 const emojiRegexText = replaceEscapes(require('emoji-regex/es2015/text'));
 
-const input = fs.readFileSync(path.join(__dirname, '../src/emoji_regex.rb'), 'utf8');
+const srcPath = path.join(__dirname, '../src');
+const libPath = path.join(__dirname, '../lib');
 
-const output = input
-  .replace('/% emojiRegexRGI %/', emojiRegexRGI)
-  .replace('/% emojiRegex %/', emojiRegex)
-  .replace('/% emojiRegexText %/', emojiRegexText);
+glob(
+  '**/*',
+  {
+    cwd: srcPath,
+    mark: true
+  },
+  (error, files) => {
+    if (error) {
+      throw error;
+    }
 
-fs.writeFileSync(path.join(__dirname, '../lib/emoji_regex.rb'), output);
+    files.forEach((file) => {
+      const dest = path.join(libPath, file);
+
+      // If this is a directory, create it in the destination
+      if (dest.endsWith('/')) {
+        console.log(`Creating directory: ${dest}...`);
+        try {
+          fs.mkdirSync(dest);
+        } catch (error) {
+          // Ignore already-existing directories
+          if (error.code !== 'EEXIST') {
+            throw error;
+          }
+        }
+      } else {
+        console.log(`Processing file: ${dest}...`);
+
+        const input = fs.readFileSync(path.join(srcPath, file), 'utf8');
+
+        const output = input
+          .replace('/% emojiRegexRGI %/', emojiRegexRGI)
+          .replace('/% emojiRegex %/', emojiRegex)
+          .replace('/% emojiRegexText %/', emojiRegexText);
+
+        fs.writeFileSync(dest, output);
+      }
+    });
+  }
+);
+
+console.log(`Done!`);
