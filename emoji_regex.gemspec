@@ -3,8 +3,8 @@ Gem::Specification.new do |s|
   s.summary     = 'Emoji Regex'
   s.description = 'A set of Ruby regular expressions for matching Unicode Emoji symbols.'
   s.homepage    = 'https://github.com/ticky/ruby-emoji-regex'
-  s.version     = '3.2.0'
-  s.date        = '2020-10-28'
+  s.version     = '3.2.1'
+  s.date        = '2020-11-02'
   s.authors     = ['Jessica Stokes']
   s.email       = 'hello@jessicastokes.net'
   s.license     = 'MIT'
