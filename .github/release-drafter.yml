@@ -1,7 +1,5 @@
 change-template: |
-  * $NUMBER: $TITLE by @$AUTHOR
+  * #$NUMBER: $TITLE (@$AUTHOR)
 
 template: |
   $CHANGES
-
-  Thanks to $CONTRIBUTORS!
