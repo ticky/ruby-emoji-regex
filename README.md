@@ -20,9 +20,9 @@ gem install emoji_regex
 
 `emoji_regex` provides three regular expressions:
 
-* `EmojiRegex::RGIRegex` is the regex you most likely want. It matches all emoji recommended for general interchange, as defined by [the Unicode standard's `RGI_Emoji` property](https://unicode.org/reports/tr51/#def_rgi_set).
+* `EmojiRegex::RGIEmoji` is the regex you most likely want. It matches all emoji recommended for general interchange, as defined by [the Unicode standard's `RGI_Emoji` property](https://unicode.org/reports/tr51/#def_rgi_set).
 
-* `EmojiRegex::Regex` is deprecated, and will be replaced by `RGIRegex` in a future major version. It matches emoji which present as emoji by default, and those which present as emoji when combined with `U+FE0F VARIATION SELECTOR-16`.
+* `EmojiRegex::Regex` is deprecated, and will be replaced by `RGIEmoji` in a future major version. It matches emoji which present as emoji by default, and those which present as emoji when combined with `U+FE0F VARIATION SELECTOR-16`.
 
 * `EmojiRegex::Text` matches emoji which present as text by default (regardless of variation selector), as well as those which present as emoji by default.
 
@@ -40,7 +40,7 @@ These characters, therefore, are matched to varying degrees of precision by each
 - `#️` is matched by `EmojiRegex::Regex` as well as `EmojiRegex::Text` as it has `Emoji_Presentation` despite not being a generally accepted Emoji or recommended for general interchange.
 - `#️⃣` is matched by all three regular expressions, as it is recommended for general interchange.
 
-It's most likely that the regular expression you want is `EmojiRegex::RGIRegex`! ☺️
+It's most likely that the regular expression you want is `EmojiRegex::RGIEmoji`! ☺️
 
 ### Example
 
