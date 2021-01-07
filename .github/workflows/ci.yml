@@ -14,15 +14,14 @@ jobs:
       fail-fast: false
       matrix:
         os:
-          - windows-latest
           - ubuntu-latest
           - macos-latest
         ruby:
+          - 2.4
           - 2.5
           - 2.6
           - 2.7
-          - '3.0'
-          - head
+          - .ruby-version
 
     runs-on: ${{ matrix.os }}
 
