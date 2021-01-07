@@ -32,6 +32,7 @@ jobs:
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
+      if: matrix.os != 'windows-latest'
 
     - name: Set up Ruby ${{ matrix.ruby }}
       uses: ruby/setup-ruby@v1
@@ -41,9 +42,11 @@ jobs:
 
     - name: Run Setup Script
       run: bin/setup
+      if: matrix.os != 'windows-latest'
 
     - name: Regenerate code
       run: bundle exec rake regenerate
+      if: matrix.os != 'windows-latest'
 
     - name: Run specs
       run: bundle exec rake
