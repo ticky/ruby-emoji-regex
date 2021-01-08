@@ -8,8 +8,22 @@ on:
 
 jobs:
   test:
+    name: Test Ruby ${{ matrix.ruby }} on ${{ matrix.os }}
 
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os:
+          - windows-latest
+          - ubuntu-latest
+          - macos-latest
+        ruby:
+          - 2.5
+          - 2.6
+          - 2.7
+          - .ruby-version
+
+    runs-on: ${{ matrix.os }}
 
     steps:
     - name: Check out code
@@ -17,15 +31,21 @@ jobs:
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
+      if: matrix.os != 'windows-latest'
 
-    - name: Set up Ruby
+    - name: Set up Ruby ${{ matrix.ruby }}
       uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: ${{ matrix.ruby }}
+        bundler-cache: true
 
     - name: Run Setup Script
       run: bin/setup
+      if: matrix.os != 'windows-latest'
 
     - name: Regenerate code
       run: bundle exec rake regenerate
+      if: matrix.os != 'windows-latest'
 
     - name: Run specs
       run: bundle exec rake
