@@ -54,6 +54,10 @@ RSpec.describe EmojiRegex do
       expect("\u{1F90C}\u{1F3FC}".scan(subject)).to eql(["\u{1F90C}\u{1F3FC}"])
     end
 
+    it "matches 💏🏿 couple kissing: dark skin tone (emoji 13.1 sequence)" do
+      expect("\u{1F48F}\u{1F3FF}".scan(subject)).to eql(["\u{1F48F}\u{1F3FF}"])
+    end
+
     it "doesn't match # (default text presentation character)" do
       expect("#".scan(subject)).to eql([])
     end
@@ -104,6 +108,10 @@ RSpec.describe EmojiRegex do
 
     it "matches 🤌🏼 pinched fingers: medium-light skin tone (emoji modifier base followed by a modifier)" do
       expect("\u{1F90C}\u{1F3FC}".scan(subject)).to eql(["\u{1F90C}\u{1F3FC}"])
+    end
+
+    it "matches 💏🏿 couple kissing: dark skin tone (emoji 13.1 sequence)" do
+      expect("\u{1F48F}\u{1F3FF}".scan(subject)).to eql(["\u{1F48F}\u{1F3FF}"])
     end
 
     it "doesn't match # (default text presentation character)" do
@@ -160,6 +168,10 @@ RSpec.describe EmojiRegex do
 
     it "matches 🤌🏼 pinched fingers: medium-light skin tone (emoji modifier base followed by a modifier)" do
       expect("\u{1F90C}\u{1F3FC}".scan(subject)).to eql(["\u{1F90C}\u{1F3FC}"])
+    end
+
+    it "matches 💏🏿 couple kissing: dark skin tone (emoji 13.1 sequence)" do
+      expect("\u{1F48F}\u{1F3FF}".scan(subject)).to eql(["\u{1F48F}\u{1F3FF}"])
     end
 
     it "matches # (default text presentation character)" do

@@ -148,7 +148,7 @@ bin/setup
 To update the Ruby source files based on the `emoji-regex` library:
 
 ```bash
-rake regenerate
+bundle exec rake regenerate
 ```
 
 ### Specs
@@ -156,7 +156,7 @@ rake regenerate
 A spec suite is provided, which can be run as:
 
 ```bash
-rake spec
+bundle exec rake spec
 ```
 
 ### Versioning Policy
