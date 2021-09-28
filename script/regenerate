@@ -3,26 +3,15 @@
 const fs = require('fs');
 const path = require('path');
 
-const replaceEscapes = (regexFactory) => (
-  // request the regex
-  regexFactory()
-    // convert regex to string so we can replace things
-    .toString()
-    // replace incompatible single-byte escapes
-    .replace(/\\x([a-zA-Z0-9]{2})/g, '\\u00$1')
-    // remove incompatible flags
-    .slice(0, -2)
-);
-
-const emojiRegexRGI = replaceEscapes(require('emoji-regex/es2015/RGI_Emoji'));
-const emojiRegex = replaceEscapes(require('emoji-regex/es2015'));
-const emojiRegexText = replaceEscapes(require('emoji-regex/es2015/text'));
+const emojiRegex = fs.readFileSync(path.join(__dirname, '../node_modules/emoji-test-regex-pattern/dist/latest/java.txt'), 'utf8')
+                     .trim()
+                     // replace incompatible escapes
+                     .replace(/\\x\{([a-zA-Z0-9]{5})\}/g, '\\u{$1}')
+                     .replace(/\\x\{([a-zA-Z0-9]{4})\}/g, '\\u$1')
+                     .replace(/\\x([a-zA-Z0-9]{2})/g, '\\u00$1')
 
 const input = fs.readFileSync(path.join(__dirname, '../src/emoji_regex.rb'), 'utf8');
 
-const output = input
-  .replace('/% emojiRegexRGI %/', emojiRegexRGI)
-  .replace('/% emojiRegex %/', emojiRegex)
-  .replace('/% emojiRegexText %/', emojiRegexText);
+const output = input.replace('/% emojiRegex %/', `/${emojiRegex}/`)
 
 fs.writeFileSync(path.join(__dirname, '../lib/emoji_regex.rb'), output);
