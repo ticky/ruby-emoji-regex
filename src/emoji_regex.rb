@@ -8,12 +8,15 @@ module EmojiRegex
   #
   # "#️⃣" (U+0023,U+FE0F,U+20E3) and "#️" (U+0023,U+FE0F) are matched, but not "#" (U+0023).
   #
-  # @deprecated Please use {RGIEmoji} instead. RGIEmoji will replace Regex in a future major release.
+  # @deprecated Please use {RGIEmoji} instead. RGIEmoji will become the only regex, and be renamed to Emoji in a future major release.
   Regex = /% emojiRegex %/
   deprecate_constant :Regex
 
   # Matches emoji which present as text by default (regardless of variation selector), as well as those which present as emoji by default.
   #
   # All of "#" (U+0023), "#️" (U+0023,U+FE0F) and "#️⃣" (U+0023,U+FE0F,U+20E3) are matched.
+  #
+  # @deprecated Please use {RGIEmoji} instead. RGIEmoji will become the only regex, and be renamed to Emoji in a future major release.
   Text = /% emojiRegexText %/
+  deprecate_constant :Text
 end

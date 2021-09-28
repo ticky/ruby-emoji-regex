@@ -18,13 +18,13 @@ gem install emoji_regex
 
 ## Usage
 
-`emoji_regex` provides three regular expressions:
+`emoji_regex` provides these regular expressions:
 
-* `EmojiRegex::RGIEmoji` is the regex you most likely want. It matches all emoji recommended for general interchange, as defined by [the Unicode standard's `RGI_Emoji` property](https://unicode.org/reports/tr51/#def_rgi_set).
+* `EmojiRegex::RGIEmoji` is the regex you most likely want. It matches all emoji recommended for general interchange, as defined by [the Unicode standard's `RGI_Emoji` property](https://unicode.org/reports/tr51/#def_rgi_set). In a future version, this regular expression will be renamed to `EmojiRegex::Regex` and all other regexes removed.
 
-* `EmojiRegex::Regex` is deprecated, and will be replaced by `RGIEmoji` in a future major version. It matches emoji which present as emoji by default, and those which present as emoji when combined with `U+FE0F VARIATION SELECTOR-16`.
+* `EmojiRegex::Regex` is deprecated, and will be replaced with `RGIEmoji` in a future major version. It matches emoji which present as emoji by default, and those which present as emoji when combined with `U+FE0F VARIATION SELECTOR-16`.
 
-* `EmojiRegex::Text` matches emoji which present as text by default (regardless of variation selector), as well as those which present as emoji by default.
+* `EmojiRegex::Text` is deprecated, and will be removed in a future major version. It matches emoji which present as text by default (regardless of variation selector), as well as those which present as emoji by default.
 
 ### RGI vs Emoji vs Text Presentation
 
