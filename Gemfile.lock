@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    emoji_regex (3.2.2)
+    emoji_regex (3.2.3)
 
 GEM
   remote: https://rubygems.org/
@@ -31,4 +31,4 @@ DEPENDENCIES
   rspec (= 3.10.0)
 
 BUNDLED WITH
-   2.2.11
+   2.2.28
