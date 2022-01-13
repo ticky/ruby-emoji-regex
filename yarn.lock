@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-emoji-test-regex-pattern@1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/emoji-test-regex-pattern/-/emoji-test-regex-pattern-1.5.0.tgz#de009fa54e548e25d57877b09273770bc99c3b30"
-  integrity sha512-g6lpYnTx+kmKLHbTiNg7zo9KL1uv2BMcSeugVQgqrwqBuFv6m9TyjiIRwJ7gxAG9m5u86GIU+0WvBXOn3LqSFQ==
+emoji-test-regex-pattern@1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/emoji-test-regex-pattern/-/emoji-test-regex-pattern-1.7.1.tgz#bb47d2b636b0488ccb31288f3446c9fbba8b1d50"
+  integrity sha512-WsfAZPq/l8Z0eGNV2wILneYHwKLPybgu8s/JzMM5MPu1P4vy3FiB3/wUi4Gr6dfI7vdAkjewgTaTvy277lXc/w==
