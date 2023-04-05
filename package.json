@@ -6,6 +6,6 @@
     "build": "node script/import.js"
   },
   "devDependencies": {
-    "emoji-test-regex-pattern": "1.7.2"
+    "emoji-test-regex-pattern": "2.1.0"
   }
 }
