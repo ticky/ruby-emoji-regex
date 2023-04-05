@@ -62,12 +62,12 @@ RSpec.describe EmojiRegex do
       expect("\u{1FAE0}".scan(subject)).to eql(["\u{1FAE0}"])
     end
 
-    it "doesn't match 🛜 wireless (emoji 15.0) (yet 😉)" do
-      expect("\u{1F6DC}".scan(subject)).to eql([])
+    it "matches 🐦‍🔥 phoenix bird (emoji 14.1 sequence)" do
+      expect("\u{1F426}\u{200D}\u{1F525}".scan(subject)).to eql(["\u{1F426}\u{200D}\u{1F525}"])
     end
 
-    it "doesn't match 🐦‍🔥 phoenix bird (emoji 14.1 sequence) (yet 😉)" do
-      expect("\u{1F426}\u{200D}\u{1F525}".scan(subject)).to eql(["\u{1F426}", "\u{1F525}"])
+    it "matches 🛜 wireless (emoji 15.0)" do
+      expect("\u{1F6DC}".scan(subject)).to eql(["\u{1F6DC}"])
     end
 
     it "doesn't match # (default text presentation character)" do
