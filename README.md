@@ -18,7 +18,7 @@ gem install emoji_regex
 
 ## Usage
 
-`emoji_regex` provides the `EmojiRegex::Regex` regular expression, which matches emoji, as defined by [the Unicode standard's `emoji-test` data file](https://unicode.org/Public/emoji/14.0/emoji-test.txt).
+`emoji_regex` provides the `EmojiRegex::Regex` regular expression, which matches emoji, as defined by [the Unicode standard's `emoji-test` data file](https://unicode.org/Public/emoji/17.0/emoji-test.txt).
 
 ### Example
 
